@@ -1,0 +1,18 @@
+html, body{
+    height: 100%;
+    
+}
+.form-container{
+    max-width: 600px;
+    padding: 5rem;
+}
+
+.your-button-class{
+    text-decoration: none;
+    color: white;
+}
+form {
+    background-color:rgb(119, 124, 139);
+    border-radius: 8px;
+    padding: 20px 10px 20px 10px;
+}
