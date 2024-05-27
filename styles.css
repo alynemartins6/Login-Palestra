@@ -11,12 +11,18 @@ html, body{
     text-decoration: none;
     color: white;
 }
-form {
-    background-color:rgb(119, 124, 139);
-    border-radius: 8px;
+.form-login{
     padding: 20px 10px 20px 10px;
+    border-radius: 8px;
 }
 .centered-heading {
     text-align: center;
     margin: 0 auto;
+}
+.form-painel{
+    width: 450px;
+    padding: 20px;
+    background-color: rgb(134, 140, 144);
+    
+    
 }
