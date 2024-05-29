@@ -21,7 +21,6 @@ buttonEnviar.addEventListener("click", async (event) => {
 		let body = new Object();
 		body.email = inputEmail.value;
 		body.pass = inputSenha.value;
-		x;
 		await fetch("http://localhost:3000/auth/login", {
 			method: "POST",
 			headers: {
@@ -33,14 +32,14 @@ buttonEnviar.addEventListener("click", async (event) => {
 			.then(async function (resp) {
 				if (!resp.ok) throw new Error("Falha ao cadastrar usuário");
 				const data = await resp.json();
-				localStorage.setItem("token", data.token);
+				localStorage.setItem("token", data.accessToken);
 				alert("Login realizado com sucesso");
-				console.log(data);
-				return data;
+				console.log(data.accessToken);
+				return data.accessToken;
 			})
 			.then((json) => alert("Login realizado com sucesso"))
+			.then(() => document.location.href = "/pagina-principal.html")
 			.catch((err) => alert("Falha ao realizar login: " + err));
-		///.finally(() => document.location.href="/pagina-principal.html" )
 	}
 });
 
