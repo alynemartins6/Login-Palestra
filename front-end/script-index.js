@@ -30,7 +30,7 @@ buttonEnviar.addEventListener("click", async (event) => {
 			body: JSON.stringify(body),
 		})
 			.then(async function (resp) {
-				if (!resp.ok) throw new Error("Falha ao cadastrar usuário");
+				if (!resp.ok) throw new Error("Email ou senha inválidos.");
 				const data = await resp.json();
 				localStorage.setItem("token", data.accessToken);
 				alert("Login realizado com sucesso");
