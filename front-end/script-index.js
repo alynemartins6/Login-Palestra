@@ -38,12 +38,13 @@ buttonEnviar.addEventListener("click", async (event) => {
 				return data.accessToken;
 			})
 			.then((json) => alert("Login realizado com sucesso"))
-			.then(() => document.location.href = "/pagina-principal.html")
+			.then(() => document.location.href = "pagina-principal.html")
 			.catch((err) => alert("Falha ao realizar login: " + err));
 	}
 });
 
 buttonCadastrar.addEventListener("click", (event) => {
 	event.preventDefault();
-	document.location.href = "/cadastro.html";
+	alert("Cadastrar");
+	document.location.href = "cadastro.html";
 });
